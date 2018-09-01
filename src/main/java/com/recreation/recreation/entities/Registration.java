@@ -20,6 +20,6 @@ public class Registration {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    //maybe have a reference to a sessionId -> Session and eagledId -> Participant
+    //maybe have a reference to a sessionId -> Session and eagleId -> Participant
 
 }
