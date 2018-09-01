@@ -31,6 +31,7 @@ public class RegisterController {
     //            "eagleId": "test eagle id"
     //    }
 
+    // On this branch, we will work with the register service
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ResponseEntity register(@RequestBody RegisterDto registerDto) {
         return ResponseEntity.ok(HttpStatus.OK);
