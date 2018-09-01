@@ -10,7 +10,9 @@ package com.recreation.recreation.dtos;
  * @author Alex Karacaoglu
  */
 
-public class ParticipantDto {
+public class RegisterDto {
+
+    private Long sessionId;
 
     private String name;
 
@@ -19,6 +21,14 @@ public class ParticipantDto {
     private String eagleId;
 
     private String phoneNumber;
+
+    public Long getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(Long sessionId) {
+        this.sessionId = sessionId;
+    }
 
     public String getName() {
         return name;

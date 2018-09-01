@@ -6,14 +6,14 @@
 package com.recreation.recreation.CreateEntitiesTests;
 
 import com.recreation.recreation.entities.Participant;
+import com.recreation.recreation.entities.Session;
 import com.recreation.recreation.repositories.ParticipantRepository;
+import com.recreation.recreation.repositories.SessionRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Date;
 
 /**
  * CreateParticipantTest
@@ -22,20 +22,20 @@ import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CreateParticipantTest {
+public class CreateSessionTest {
 
 	@Autowired
-	ParticipantRepository participantRepository;
+	SessionRepository sessionRepository;
 
 	@Test
-	public void createParticipant() {
-		Participant participant = new Participant();
-		participant.setName("test participant name");
-		participant.setEmail("test email");
-		participant.setEagleId("test eagle id");
-		participant.setPhoneNumber("test phone");
-		participant.setDeleted(Boolean.FALSE);
-		participantRepository.save(participant);
+	public void createSession() {
+		Session session = new Session();
+		session.setName("Spin");
+		session.setTotalSpots(100);
+		session.setSpotsLeft(100);
+		session.setTeacher("Spin Teacher");
+		session.setDeleted(Boolean.FALSE);
+		sessionRepository.save(session);
 
 		assert 1==1;
 	}

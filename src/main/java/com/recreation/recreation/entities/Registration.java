@@ -13,13 +13,40 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "PARTICIPANT", schema = "TESTDB")
-public class Registration {
+@Table(name = "REGISTRATION", schema = "TESTDB")
+public class Registration extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    //maybe have a reference to a sessionId -> Session and eagleId -> Participant
+    @Column(name="SESSION_ID")
+    private String teacher;
 
+    @Column(name="EAGLE_ID")
+    private String eagleId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public String getEagleId() {
+        return eagleId;
+    }
+
+    public void setEagleId(String eagleId) {
+        this.eagleId = eagleId;
+    }
 }
