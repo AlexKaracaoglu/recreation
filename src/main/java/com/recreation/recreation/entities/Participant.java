@@ -1,6 +1,16 @@
+/*
+ * Property of 2150 Room 201
+ * 2018
+ */
+
 package com.recreation.recreation.entities;
 
 import javax.persistence.*;
+
+/**
+ * Participant Entity
+ * @author Alex Karacaoglu
+ */
 
 @Entity
 @Table(name = "PARTICIPANT", schema = "TESTDB")

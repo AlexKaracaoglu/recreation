@@ -5,16 +5,16 @@
 
 package com.recreation.recreation.repositories;
 
-import com.recreation.recreation.entities.Participant;
+import com.recreation.recreation.entities.Session;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * ParticipantRepository
+ * SessionRepository
  * @author Alex Karacaoglu
  */
 
 @Repository
-public interface ParticipantRepository extends PagingAndSortingRepository<Participant, Long> {
+public interface SessionRepository extends PagingAndSortingRepository<Session, Long> {
 
 }
