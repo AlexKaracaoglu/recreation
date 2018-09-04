@@ -5,9 +5,7 @@
 
 package com.recreation.recreation.CreateEntitiesTests;
 
-import com.recreation.recreation.entities.Participant;
 import com.recreation.recreation.entities.Session;
-import com.recreation.recreation.repositories.ParticipantRepository;
 import com.recreation.recreation.repositories.SessionRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,10 +28,10 @@ public class CreateSessionTest {
 	@Test
 	public void createSession() {
 		Session session = new Session();
-		session.setName("Spin");
-		session.setTotalSpots(100);
-		session.setSpotsLeft(100);
-		session.setTeacher("Spin Teacher");
+		session.setName("Spin class 2");
+		session.setTotalSpots(10);
+		session.setSpotsLeft(10);
+		session.setTeacher("Spin Teacher 2");
 		session.setDeleted(Boolean.FALSE);
 		sessionRepository.save(session);
 
