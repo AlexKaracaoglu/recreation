@@ -17,11 +17,11 @@ import javax.persistence.*;
 public class Registration extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name="SESSION_ID")
-    private String teacher;
+    private Long sessionId;
 
     @Column(name="EAGLE_ID")
     private String eagleId;
@@ -34,12 +34,12 @@ public class Registration extends BaseEntity {
         this.id = id;
     }
 
-    public String getTeacher() {
-        return teacher;
+    public Long getSessionId() {
+        return sessionId;
     }
 
-    public void setTeacher(String teacher) {
-        this.teacher = teacher;
+    public void setSessionId(Long sessionId) {
+        this.sessionId = sessionId;
     }
 
     public String getEagleId() {

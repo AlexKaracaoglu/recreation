@@ -6,6 +6,8 @@
 package com.recreation.recreation.controllers;
 
 import com.recreation.recreation.dtos.RegisterDto;
+import com.recreation.recreation.services.RegisterService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -31,8 +33,14 @@ public class RegisterController {
     //            "eagleId": "test eagle id"
     //    }
 
+    // On this branch, we will work with the register service
+
+    @Autowired
+    RegisterService registerService;
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ResponseEntity register(@RequestBody RegisterDto registerDto) {
+        this.registerService.register(registerDto);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }

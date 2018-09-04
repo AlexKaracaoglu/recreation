@@ -5,7 +5,7 @@
 
 package com.recreation.recreation.repositories;
 
-import com.recreation.recreation.entities.Session;
+import com.recreation.recreation.entities.Registration;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface RegistrationRepository extends PagingAndSortingRepository<Session, Long> {
+public interface RegistrationRepository extends PagingAndSortingRepository<Registration, Long> {
 
 }

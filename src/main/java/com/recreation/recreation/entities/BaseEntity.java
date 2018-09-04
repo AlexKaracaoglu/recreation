@@ -13,6 +13,7 @@ import javax.persistence.*;
  * @author Alex Karacaoglu
  */
 
+//Base Entity to be extended by all other entities
 @MappedSuperclass
 public class BaseEntity {
 

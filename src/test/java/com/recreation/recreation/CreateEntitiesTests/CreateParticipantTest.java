@@ -30,10 +30,10 @@ public class CreateParticipantTest {
 	@Test
 	public void createParticipant() {
 		Participant participant = new Participant();
-		participant.setName("test participant name");
-		participant.setEmail("test email");
-		participant.setEagleId("test eagle id");
-		participant.setPhoneNumber("test phone");
+		participant.setName("name");
+		participant.setEmail("email");
+		participant.setEagleId("eagle id");
+		participant.setPhoneNumber("phone");
 		participant.setDeleted(Boolean.FALSE);
 		participantRepository.save(participant);
 

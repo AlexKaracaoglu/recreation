@@ -17,4 +17,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ParticipantRepository extends PagingAndSortingRepository<Participant, Long> {
 
+    Participant findByEagleId(String eagleId);
 }
