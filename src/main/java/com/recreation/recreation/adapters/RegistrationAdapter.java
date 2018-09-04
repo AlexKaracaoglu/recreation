@@ -1,6 +1,16 @@
+/*
+ * Property of 2150 Room 201
+ * 2018
+ */
+
 package com.recreation.recreation.adapters;
 
 import com.recreation.recreation.entities.Registration;
+
+/**
+ * RegistrationAdapter
+ * @author Alex Karacaoglu
+ */
 
 public class RegistrationAdapter {
 

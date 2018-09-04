@@ -1,7 +1,17 @@
+/*
+ * Property of 2150 Room 201
+ * 2018
+ */
+
 package com.recreation.recreation.adapters;
 
 import com.recreation.recreation.dtos.RegisterDto;
 import com.recreation.recreation.entities.Participant;
+
+/**
+ * ParticipantAdapter
+ * @author Alex Karacaoglu
+ */
 
 public class ParticipantAdapter {
 

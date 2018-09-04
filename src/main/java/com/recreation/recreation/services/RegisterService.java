@@ -1,3 +1,8 @@
+/*
+ * Property of 2150 Room 201
+ * 2018
+ */
+
 package com.recreation.recreation.services;
 
 import com.recreation.recreation.adapters.ParticipantAdapter;
@@ -14,6 +19,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
+/**
+ * RegisterService
+ * @author Alex Karacaoglu
+ */
 
 @Service
 public class RegisterService {
