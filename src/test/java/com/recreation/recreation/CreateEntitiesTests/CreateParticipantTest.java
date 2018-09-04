@@ -32,7 +32,7 @@ public class CreateParticipantTest {
 		Participant participant = new Participant();
 		participant.setName("name");
 		participant.setEmail("email");
-		participant.setEagleId("eagle id");
+		participant.setEagleId("5599");
 		participant.setPhoneNumber("phone");
 		participant.setDeleted(Boolean.FALSE);
 		participantRepository.save(participant);
