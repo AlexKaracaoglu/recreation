@@ -17,4 +17,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RegistrationRepository extends PagingAndSortingRepository<Registration, Long> {
 
+    Registration findByEagleIdAndSessionId(String eagleId, Long sessionId);
+
 }

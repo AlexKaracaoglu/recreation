@@ -28,6 +28,7 @@ public class CreateSessionTest {
 	@Test
 	public void createSession() {
 		Session session = new Session();
+		session.setId(1L);
 		session.setName("Spin class 2");
 		session.setTotalSpots(10);
 		session.setSpotsLeft(10);
