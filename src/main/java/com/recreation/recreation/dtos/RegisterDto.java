@@ -6,7 +6,7 @@
 package com.recreation.recreation.dtos;
 
 /**
- * Participant Entity
+ * RegisterDto
  * @author Alex Karacaoglu
  */
 
