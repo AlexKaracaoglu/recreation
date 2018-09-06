@@ -6,11 +6,11 @@
 package com.recreation.recreation.dtos;
 
 /**
- * CancelSessionDto
+ * SessionIdentifierDto
  * @author Alex Karacaoglu
  */
 
-public class CancelSessionDto {
+public class SessionIdentifierDto {
 
     private Long sessionId;
 

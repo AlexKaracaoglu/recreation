@@ -28,8 +28,8 @@ public class CreateRegistrationTest {
 	@Test
 	public void createRegistration() {
 		Registration registration = new Registration();
-		registration.setEagleId("55");
-		registration.setSessionId(2L);
+		registration.setEagleId("92");
+		registration.setSessionId(4L);
 		registration.setDeleted(Boolean.FALSE);
 		registrationRepository.save(registration);
 		assert 1==1;

@@ -5,7 +5,7 @@
 
 package com.recreation.recreation.controllers;
 
-import com.recreation.recreation.dtos.CancelSessionDto;
+import com.recreation.recreation.dtos.SessionIdentifierDto;
 import com.recreation.recreation.services.CancelSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,8 +33,8 @@ public class CancelSessionController {
     CancelSessionService cancelSessionService;
 
     @RequestMapping(value = "/cancel-session", method = RequestMethod.POST)
-    public ResponseEntity register(@RequestBody CancelSessionDto cancelSessionDto) {
-        this.cancelSessionService.cancelSession(cancelSessionDto);
+    public ResponseEntity register(@RequestBody SessionIdentifierDto sessionIdentifierDto) {
+        this.cancelSessionService.cancelSession(sessionIdentifierDto);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }
