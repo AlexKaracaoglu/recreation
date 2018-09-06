@@ -5,7 +5,7 @@
 
 package com.recreation.recreation.services;
 
-import com.recreation.recreation.dtos.CancelSessionDto;
+import com.recreation.recreation.dtos.SessionIdentifierDto;
 import com.recreation.recreation.entities.Session;
 import com.recreation.recreation.exceptions.SessionNotFoundException;
 import com.recreation.recreation.repositories.RegistrationRepository;
@@ -29,9 +29,9 @@ public class CancelSessionService {
     @Autowired
     RegistrationRepository registrationRepository;
 
-    public void cancelSession(CancelSessionDto cancelSessionDto) {
-        deleteSession(cancelSessionDto.getSessionId());
-        deleteRegistrations(cancelSessionDto.getSessionId());
+    public void cancelSession(SessionIdentifierDto sessionIdentifierDto) {
+        deleteSession(sessionIdentifierDto.getSessionId());
+        deleteRegistrations(sessionIdentifierDto.getSessionId());
     }
 
     private void deleteRegistrations(Long sessionId) {
