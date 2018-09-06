@@ -13,8 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-
 /**
  * CreateParticipantTest
  * @author Alex Karacaoglu
@@ -30,9 +28,9 @@ public class CreateParticipantTest {
 	@Test
 	public void createParticipant() {
 		Participant participant = new Participant();
-		participant.setName("name");
+		participant.setName("92 name");
 		participant.setEmail("email");
-		participant.setEagleId("5599");
+		participant.setEagleId("92");
 		participant.setPhoneNumber("phone");
 		participant.setDeleted(Boolean.FALSE);
 		participantRepository.save(participant);

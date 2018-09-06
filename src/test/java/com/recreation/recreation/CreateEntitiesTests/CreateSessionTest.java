@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * CreateParticipantTest
+ * CreateSessionTest
  * @author Alex Karacaoglu
  */
 
@@ -28,11 +28,11 @@ public class CreateSessionTest {
 	@Test
 	public void createSession() {
 		Session session = new Session();
-		session.setId(1L);
-		session.setName("Spin class 2");
+		session.setId(3L);
+		session.setName("Spin class 3");
 		session.setTotalSpots(10);
 		session.setSpotsLeft(10);
-		session.setTeacher("Spin Teacher 2");
+		session.setTeacher("Spin Teacher 3");
 		session.setDeleted(Boolean.FALSE);
 		sessionRepository.save(session);
 
