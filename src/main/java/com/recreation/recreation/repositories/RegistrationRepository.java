@@ -13,6 +13,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * RegistrationRepository
@@ -28,5 +29,7 @@ public interface RegistrationRepository extends PagingAndSortingRepository<Regis
     @Modifying
     @Query("update Registration r set r.deleted = :deleted where r.sessionId = :sessionId")
     void cancelSession(@Param("deleted") Boolean deleted, @Param("sessionId") Long sessionId);
+
+    List<Registration> findBySessionIdAndDeleted(Long sessionId, Boolean deleted);
 
 }
