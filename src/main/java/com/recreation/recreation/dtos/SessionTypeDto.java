@@ -12,13 +12,13 @@ package com.recreation.recreation.dtos;
 
 public class SessionTypeDto {
 
-    private String sessionName;
+    private String name;
 
-    public String getSessionName() {
-        return sessionName;
+    public String getName() {
+        return name;
     }
 
-    public void setSessionName(String sessionName) {
-        this.sessionName = sessionName;
+    public void setName(String name) {
+        this.name = name;
     }
 }

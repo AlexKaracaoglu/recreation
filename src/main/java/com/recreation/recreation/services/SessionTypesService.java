@@ -37,7 +37,7 @@ public class SessionTypesService {
 
     private SessionTypeDto createNewSessionTypeDto(String sessionName) {
         SessionTypeDto sessionTypeDto = new SessionTypeDto();
-        sessionTypeDto.setSessionName(sessionName);
+        sessionTypeDto.setName(sessionName);
         return sessionTypeDto;
     }
 
