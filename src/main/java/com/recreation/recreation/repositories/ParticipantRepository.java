@@ -21,5 +21,7 @@ public interface ParticipantRepository extends PagingAndSortingRepository<Partic
 
     Participant findByEagleId(String eagleId);
 
+    Participant findByEagleIdAndDeleted(String eagleId, Boolean deleted);
+
     List<Participant> findByEagleIdInAndDeleted(List<String> eagleIds, Boolean deleted);
 }
