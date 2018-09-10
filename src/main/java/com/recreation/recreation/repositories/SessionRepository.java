@@ -9,6 +9,7 @@ import com.recreation.recreation.entities.Session;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -20,5 +21,7 @@ import java.util.Optional;
 public interface SessionRepository extends PagingAndSortingRepository<Session, Long> {
 
     Optional<Session> findById(Long id);
+
+    List<Session> findByNameAndDeleted(String sessionType, Boolean deleted);
 
 }
