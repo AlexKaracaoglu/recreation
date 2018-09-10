@@ -27,7 +27,7 @@ public class GetParticipantInformationController {
 
     // Example url: http://localhost:8080/participant-info?eagleId=3
     @RequestMapping(value = "/participant-info", method = RequestMethod.GET)
-    public ResponseEntity<ParticipantInformationDto> register(@RequestParam String eagleId) {
+    public ResponseEntity<ParticipantInformationDto> getParticipantInfo(@RequestParam String eagleId) {
         ParticipantInformationDto participant = participantInformationService.getParticipant(eagleId);
         return ResponseEntity.ok(participant);
     }
