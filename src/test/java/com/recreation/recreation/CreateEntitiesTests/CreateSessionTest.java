@@ -28,11 +28,10 @@ public class CreateSessionTest {
 	@Test
 	public void createSession() {
 		Session session = new Session();
-		session.setId(3L);
-		session.setName("Spin class 3");
+		session.setName("Spin");
 		session.setTotalSpots(10);
 		session.setSpotsLeft(10);
-		session.setTeacher("Spin Teacher 3");
+		session.setTeacher("Spin Teacher 2");
 		session.setDeleted(Boolean.FALSE);
 		sessionRepository.save(session);
 
