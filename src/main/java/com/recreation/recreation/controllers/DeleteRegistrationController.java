@@ -36,7 +36,7 @@ public class DeleteRegistrationController {
     DeleteRegistrationService deleteRegistrationService;
 
     @RequestMapping(value = "/delete-registration", method = RequestMethod.POST)
-    public ResponseEntity register(@RequestBody DeleteRegistrationDto deleteRegistrationDto) {
+    public ResponseEntity deleteRegistration(@RequestBody DeleteRegistrationDto deleteRegistrationDto) {
         this.deleteRegistrationService.deleteRegistration(deleteRegistrationDto);
         return ResponseEntity.ok(HttpStatus.OK);
     }

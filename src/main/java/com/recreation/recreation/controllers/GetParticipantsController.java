@@ -28,7 +28,7 @@ public class GetParticipantsController {
 
     // Example url: http://localhost:8080/get-participants?sessionId=3
     @RequestMapping(value = "/get-participants", method = RequestMethod.GET)
-    public ResponseEntity<List<ParticipantsDto>> register(@RequestParam Long sessionId) {
+    public ResponseEntity<List<ParticipantsDto>> getParticipants(@RequestParam Long sessionId) {
         List<ParticipantsDto> participants = getParticipantsService.getParticipants(sessionId);
         return ResponseEntity.ok(participants);
     }
