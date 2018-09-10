@@ -33,7 +33,7 @@ public class CancelSessionController {
     CancelSessionService cancelSessionService;
 
     @RequestMapping(value = "/cancel-session", method = RequestMethod.POST)
-    public ResponseEntity register(@RequestBody SessionIdentifierDto sessionIdentifierDto) {
+    public ResponseEntity cancelSession(@RequestBody SessionIdentifierDto sessionIdentifierDto) {
         this.cancelSessionService.cancelSession(sessionIdentifierDto);
         return ResponseEntity.ok(HttpStatus.OK);
     }

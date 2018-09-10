@@ -5,12 +5,14 @@
 
 package com.recreation.recreation.services;
 
+import com.recreation.recreation.adapters.SessionTypeAdapter;
 import com.recreation.recreation.dtos.SessionTypeDto;
-import com.recreation.recreation.enums.SessionType;
+import com.recreation.recreation.entities.SessionType;
+import com.recreation.recreation.repositories.SessionTypeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,24 +23,16 @@ import java.util.List;
 @Service
 public class SessionTypesService {
 
-    public List<SessionTypeDto> getSessionTypes() {
-        List<SessionType> sessionTypes = Arrays.asList(SessionType.values());
-        return getSessionNames(sessionTypes);
-    }
+    @Autowired
+    SessionTypeRepository sessionTypeRepository;
 
-    private List<SessionTypeDto> getSessionNames(List<SessionType> sessionTypes) {
+    public List<SessionTypeDto> getSessionTypes() {
         List<SessionTypeDto> sessionTypeDtos = new ArrayList<>();
+        List<SessionType> sessionTypes = sessionTypeRepository.findByDeleted(Boolean.FALSE);
         for (SessionType sessionType: sessionTypes) {
-            String sessionName = sessionType.getSessionName();
-            sessionTypeDtos.add(createNewSessionTypeDto(sessionName));
+            sessionTypeDtos.add(SessionTypeAdapter.convert(sessionType));
         }
         return sessionTypeDtos;
-    }
-
-    private SessionTypeDto createNewSessionTypeDto(String sessionName) {
-        SessionTypeDto sessionTypeDto = new SessionTypeDto();
-        sessionTypeDto.setName(sessionName);
-        return sessionTypeDto;
     }
 
 }
