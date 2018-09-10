@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 
 @Controller
-public class GetParticipantController {
+public class GetParticipantInformationController {
 
     @Autowired
     GetParticipantInformationService participantInformationService;
