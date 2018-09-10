@@ -28,11 +28,11 @@ public class CreateParticipantTest {
 	@Test
 	public void createParticipant() {
 		Participant participant = new Participant();
-		participant.setName("92 name");
+		participant.setName("3 name");
 		participant.setEmail("email");
-		participant.setEagleId("92");
+		participant.setEagleId("4");
 		participant.setPhoneNumber("phone");
-		participant.setDeleted(Boolean.FALSE);
+		participant.setDeleted(Boolean.TRUE);
 		participantRepository.save(participant);
 
 		assert 1==1;
