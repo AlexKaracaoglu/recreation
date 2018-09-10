@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SessionController {
 
     @RequestMapping(value = "/get-sessions", method = RequestMethod.GET)
-    public ResponseEntity<Session> register() {
+    public ResponseEntity<Session> getSessions() {
         Session session = new Session();
         return ResponseEntity.ok(session);
     }
