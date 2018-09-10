@@ -5,6 +5,7 @@
 
 package com.recreation.recreation.adapters;
 
+import com.recreation.recreation.dtos.ParticipantInformationDto;
 import com.recreation.recreation.dtos.RegisterDto;
 import com.recreation.recreation.entities.Participant;
 
@@ -35,5 +36,13 @@ public class ParticipantAdapter {
         updatedParticipant.setDeleted(Boolean.FALSE);
         return updatedParticipant;
 
+    }
+
+    public static Participant update(Participant participant, ParticipantInformationDto participantInformationDto) {
+        participant.setPhoneNumber(participantInformationDto.getPhoneNumber());
+        participant.setEagleId(participantInformationDto.getEagleId());
+        participant.setEmail(participantInformationDto.getEmail());
+        participant.setName(participantInformationDto.getName());
+        return participant;
     }
 }
